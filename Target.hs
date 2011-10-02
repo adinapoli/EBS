@@ -19,7 +19,9 @@ type ManaPoints = Integer
 data TargetableUnit = Unit{name :: String,
                            level :: Int,
                            hp :: HitPoints,
+                           maxHp :: HitPoints,
                            mp :: ManaPoints,
+                           maxMp :: ManaPoints,
                            elemType :: Maybe Element,
                            status :: Maybe [Status]} deriving (Eq, Read, Show)
 

@@ -5,4 +5,4 @@ module EBS.MonsterPark(
 import EBS.Elemental
 import EBS.Target
 
-piros = Unit "Piros" 1 300 50 (Just Fire) Nothing
+piros = Unit "Piros" 1 300 300 50 50 (Just Fire) Nothing
