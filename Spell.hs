@@ -40,9 +40,8 @@ cast s t =
         in case spellEffect s of
             Damage hit mana -> t {hp = hp t - floor (fromIntegral hit * coeff),
                                   mp = mp t - floor (fromIntegral mana * coeff)}
-            Inflict statList -> case (status t) of
-                                     (Just sList) -> t {status = Just $ nub (sList ++ statList)}
-                                     Nothing -> t {status = Just statList}
+            Inflict statList -> let sList = status t
+                                    in t {status = nub (sList ++ statList)}
             Custom f -> f $ t
 
 
